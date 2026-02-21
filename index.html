@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Stock Market Explained</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+    <div class="hero-content">
+        <h1>The Stock Market Explained Simply</h1>
+        <p>What I wish someone clearly explained before anyone ever told me to “just start trading.”</p>
+        <button onclick="scrollToSection('foundation')">Start Learning</button>
+        <button class="dark-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+    </div>
+</header>
+
+<nav class="navbar">
+    <a onclick="scrollToSection('foundation')">What You're Buying</a>
+    <a onclick="scrollToSection('movement')">Why Prices Move</a>
+    <a onclick="scrollToSection('trading')">What Trading Really Is</a>
+    <a onclick="scrollToSection('risk')">Risk</a>
+    <a onclick="scrollToSection('mistakes')">Beginner Mistakes</a>
+    <a onclick="scrollToSection('compound')">Long-Term Growth</a>
+    <a onclick="scrollToSection('simulator')">Simulator</a>
+    <a onclick="scrollToSection('quiz')">Quiz</a>
+</nav>
+
+<section id="foundation" class="section hidden">
+    <h2>What You Are Actually Buying</h2>
+    <p>
+        When you buy a stock, you are not buying random numbers on a screen, and you are definitely not buying a lottery ticket, you are buying a tiny piece of a real company that makes products, hires workers, and tries to earn profit, and the easiest way to imagine this is to picture a giant pizza that represents the company, and each slice of that pizza is a share, so when you buy a share you own one slice, and if the company grows, earns more money, invents something important, or becomes more valuable, then the whole pizza becomes more valuable, which means your slice becomes more valuable too, and the stock market is simply the place where people trade these slices back and forth based on what they believe the future of that company will look like.
+    </p>
+</section>
+
+<section id="movement" class="section hidden">
+    <h2>Why Stock Prices Move</h2>
+    <p>
+        Stock prices move for one extremely basic reason which is supply and demand, meaning if more people want to buy a stock than sell it then buyers compete and push the price higher, and if more people want to sell than buy then sellers compete and lower the price, but what makes people suddenly want to buy or sell is usually expectations about the future such as earnings reports, product launches, economic news, or even rumors, and this is important because as a trader you are not trading what is happening right now, you are trading what people think will happen next, and sometimes prices move not because of logic but because of fear, excitement, or herd behavior.
+    </p>
+</section>
+
+<section id="trading" class="section hidden">
+    <h2>What Trading Really Is</h2>
+    <p>
+        Trading means trying to buy a stock at a lower price and sell it at a higher price in a short amount of time, which sounds easy but is actually very competitive because millions of intelligent adults with advanced software are attempting the same thing at the same time, and many beginners imagine trading as quick and glamorous profit, but in reality it requires discipline, emotional control, and a clear strategy, because if you react impulsively to every small price movement you will probably lose money instead of gaining it.
+    </p>
+</section>
+
+<section id="risk" class="section hidden">
+    <h2>Understanding Risk</h2>
+    <p>
+        The stock market does not move in a straight line upward like a staircase, it moves unpredictably up and down and sometimes crashes sharply, which means there is always risk involved, and risk is simply the possibility that you are wrong and lose money, so intelligent traders focus less on being correct every single time and more on limiting how much they lose when they are incorrect, because protecting your capital is more important than chasing exciting gains.
+    </p>
+</section>
+
+<section id="mistakes" class="section hidden">
+    <h2>Common Beginner Mistakes</h2>
+    <p>
+        Most beginners make predictable mistakes such as buying a stock only because it is already going up very fast, selling in panic when prices drop suddenly, risking too much money on one trade, trading without any plan, copying random advice from social media, or believing they will get rich quickly, and the truth is that consistent success usually comes from patience, research, risk management, and emotional stability rather than from dramatic and impulsive decisions.
+    </p>
+</section>
+
+<section id="compound" class="section hidden">
+    <h2>The Power of Long-Term Growth</h2>
+    <p>
+        Instead of constantly trading, many people choose long-term investing where they buy strong companies or entire market indexes and hold them for years, allowing compound growth to work, which means your money earns returns and then those returns also earn returns over time, and although this method may seem less exciting than short-term trading, historically it has been more reliable because businesses tend to grow over decades even though they fluctuate in the short term.
+    </p>
+
+    <div class="calculator">
+        <input type="number" id="principal" placeholder="Initial Investment ($)">
+        <input type="number" id="rate" placeholder="Annual Return (%)">
+        <input type="number" id="years" placeholder="Years">
+        <button onclick="calculateCompound()">Calculate</button>
+        <p id="compound-result"></p>
+    </div>
+</section>
+
+<section id="simulator" class="section hidden">
+    <h2>Market Reaction Simulator</h2>
+    <p>
+        Watch how prices react over time as events happen. Notice the dollar change, percentage change, and moving average, just like traders.
+    </p>
+
+    <div class="price-panel">
+        <div class="price-main" id="price-glow">
+            $<span id="current-price">100.00</span>
+        </div>
+        <div id="price-change" class="price-change">
+            +0.00 (0.00%)
+        </div>
+    </div>
+
+    <canvas id="chart" width="800" height="400"></canvas>
+
+    <div class="button-group">
+        <button class="event-btn positive" onclick="changePrice(15)">Strong Earnings</button>
+        <button class="event-btn negative" onclick="changePrice(-15)">Weak Earnings</button>
+        <button class="event-btn positive" onclick="changePrice(30)">Major Innovation</button>
+        <button class="event-btn negative" onclick="changePrice(-40)">Market Panic</button>
+        <button class="event-btn" onclick="resetChart()">Reset Chart</button>
+    </div>
+</section>
+
+<section id="quiz" class="section hidden">
+    <h2>Knowledge Check</h2>
+    <p>Test your understanding of trading and investing:</p>
+
+    <div id="quiz-container" style="display:flex; flex-direction:column; gap:15px;"></div>
+
+    <p id="quiz-result" style="margin-top:15px;font-weight:bold;"></p>
+</section>
+<footer>
+    <p>Learn clearly. Think critically. Then trade carefully.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
