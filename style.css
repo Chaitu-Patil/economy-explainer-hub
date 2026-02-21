@@ -1,0 +1,232 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fafc;
+    color: #1f2937;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(135deg, #1e3a8a, #2563eb);
+    color: white;
+    text-align: center;
+    padding: 120px 20px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+/* NAVBAR FIX */
+.navbar {
+    background: white;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000; /* prevents overlap */
+}
+
+.navbar a {
+    margin: 0 15px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.navbar a:hover {
+    color: #2563eb;
+}
+
+/* SECTIONS */
+.section {
+    max-width: 900px;
+    margin: auto;
+    padding: 100px 20px;
+    scroll-margin-top: 120px; /* fixes scroll overlap */
+}
+
+.section h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.section p {
+    line-height: 1.9;
+    font-size: 17px;
+}
+
+/* CALCULATOR */
+.calculator input {
+    padding: 10px;
+    margin: 5px;
+    width: 180px;
+}
+
+.buttons button {
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #2563eb;
+    color: white;
+    cursor: pointer;
+}
+
+.buttons button:hover {
+    background: #1e40af;
+}
+
+/* GRAPH */
+#chart {
+    margin-top: 30px;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* ANIMATIONS */
+.hidden {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 40px;
+    background: #1e3a8a;
+    color: white;
+}
+
+/* DARK MODE */
+.dark {
+    background: #111827;
+    color: #f3f4f6;
+}
+
+.dark .navbar {
+    background: #1f2937;
+}
+
+.dark #chart {
+    background: #1f2937;
+}
+
+/* PRICE PANEL */
+.price-panel {
+    margin: 30px 0;
+    text-align: center;
+}
+
+.price-main {
+    font-size: 42px;
+    font-weight: bold;
+}
+
+.price-change {
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+/* BUTTON STYLING */
+.button-group {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.event-btn {
+    padding: 14px 24px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.event-btn.positive {
+    background: #16a34a;
+    color: white;
+}
+
+.event-btn.positive:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+}
+
+.event-btn.negative {
+    background: #dc2626;
+    color: white;
+}
+
+.event-btn.negative:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+}
+
+/* ===== GLOBAL BUTTON STYLING ===== */
+
+button {
+    padding: 14px 26px;
+    font-size: 15px;
+    font-weight: 600;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.5px;
+}
+
+/* Default primary button */
+button:not(.positive):not(.negative) {
+    background: #2563eb;
+    color: white;
+}
+
+button:not(.positive):not(.negative):hover {
+    background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Positive buttons (green) */
+button.positive {
+    background: #16a34a;
+    color: white;
+}
+
+button.positive:hover {
+    background: #15803d;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Negative buttons (red) */
+button.negative {
+    background: #dc2626;
+    color: white;
+}
+
+button.negative:hover {
+    background: #b91c1c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Optional: subtle click effect */
+button:active {
+    transform: translateY(0px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
